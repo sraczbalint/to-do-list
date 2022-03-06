@@ -42,7 +42,7 @@ function Todo ({updateTodo,deleteTodo, completeTodo, todos }) {
 
         return (
             <div>
-                {todos.length > 0 ? Tasks() : (<h1>Nothing Todo!</h1>)}
+              {todos?.length > 0 ? Tasks()  : (<h1>Nothing Todo!</h1>)}
             </div>
         )
     }        

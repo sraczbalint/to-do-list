@@ -32,6 +32,16 @@ function TodoList() {
        setTodos(removeArr);
    };
 
+   const completeTodo = id => {
+    let updatedTodos = todos.map(todo => {
+      if (todo.id === id) {
+        todo.isComplete = !todo.isComplete;
+      }
+      return todo;
+    });
+    setTodos(updatedTodos);
+  };
+
     return(
         <div>
             <h1>What is your plan for today?</h1>
@@ -39,10 +49,9 @@ function TodoList() {
 
             <Todo
              todos={todos}
-            //  completeTodo={completeTodo}
+             completeTodo={completeTodo}
               deleteTodo={deleteTodo}
               updateTodo={updateTodo}
-            //  completeTodo={completeTodo}
              /> 
 
         </div>
